@@ -7,13 +7,13 @@ const [show,setShow] = useState(false) ;
 const handleShow=()=>setShow(true);
 const handleClose=()=>setShow(false);
         return (
-          <div className="card text-center bg-secondary ab-3">
+          <div className='image-container d-flex justify-content-start m-3'>
             <div className="card-body">
-                <h5>{title}</h5>
+                <h1 id='command'>{title}</h1>
                 <img className="card-img-top"style={{innerWidth:"4em"}} 
                           src={API_URL_IMAGES+poster_path} alt="my pix name"/>
                 <div className="card-body">
-                    <p>{overview}</p>
+                    
                     
                     <button type='button' className='btn btn-primary' onClick={handleShow}>View Movie</button>
                     <Modal show = {show} onHide={handleClose} style={{opacity:1}}>
